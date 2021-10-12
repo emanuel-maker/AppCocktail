@@ -22,7 +22,7 @@ const Proposals = () => {
               key={proposal.id} 
               proposal={proposal} 
               setProposal={setCardSelected} 
-              cardSelected={proposalSelected}
+              proposalSelected={proposalSelected}
             />
           )}
         </div>

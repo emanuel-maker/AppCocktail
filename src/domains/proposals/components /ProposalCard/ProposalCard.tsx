@@ -3,14 +3,14 @@ import './style.sass';
 
 type TProps = {
   proposal: ProposalType;
-  cardSelected: number;
+  proposalSelected: number;
   setProposal: (id : number) => void;
 }
 
-const ProposalCard = ({ proposal, cardSelected, setProposal }: TProps) => {
+const ProposalCard = ({ proposal, proposalSelected, setProposal }: TProps) => {
 
   const { id, title , options } = proposal;
-  const isSelected = cardSelected === id;
+  const isSelected = proposalSelected === id;
 
   const handleSelectProposal = () => {
     setProposal(id);
