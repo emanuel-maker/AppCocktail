@@ -1,0 +1,93 @@
+@import 'src/vars/colors'
+@import 'src/vars/mixins'
+
+.beer-card
+    width: 100% 
+    min-height: 150px
+    display: flex
+    border: 2px $white-3 solid 
+    justify-content: space-between
+    cursor: pointer
+
+    @include tablet
+        flex-direction: column
+
+    @include phone
+        flex-direction: column
+
+.beer-row 
+    display: flex
+    flex-direction: row
+    gap: 20px
+
+    @include tablet
+        padding: 10px
+        flex-direction: column
+
+    @include phone
+        padding: 10px 
+        flex-direction: column
+
+.container-img
+    text-align: center
+    padding: 20px
+    min-width: 160px
+    height: 150px
+
+.container-desc 
+    max-width: 800px
+    overflow-wrap: break-word
+
+.container-desc p
+    color: $gray-2
+
+.container-desc p
+    @include tablet
+        width: 100%
+
+    @include phone
+        width: 100%
+
+.container-img img
+    height: 100%
+
+.mark 
+    width: 200px
+    padding-top: 20px
+    display: flex
+    justify-content: flex-end
+
+    @include tablet
+        width: 100%
+        padding: 0px
+
+    @include phone
+        width: 100%
+        padding: 0px
+
+.mark h3 
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $black-1
+    height: 30px
+    min-width: 80px
+    padding: 15px 30px 15px 5px
+
+    @include tablet
+        width: 100%
+        padding: 0px
+
+    @include phone
+        padding: 0px
+    
+.abvYellow h3
+    background-color: $yellow-1
+
+.abvOrange h3
+    background-color: $orange-1
+
+.abvRed h3
+    background-color: $red-1
+    color: $white-1
+

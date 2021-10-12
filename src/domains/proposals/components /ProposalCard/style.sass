@@ -1,0 +1,109 @@
+@import 'src/vars/colors'
+@import 'src/vars/mixins'
+
+.proposal-card 
+    width: 215px
+    background-color: $white-1
+    min-height: 550px
+    border: $blue-5 1px solid 
+    cursor: pointer
+    word-wrap: break-word
+
+    @include tablet
+        min-height: 100px
+
+    @include phone
+        min-height: 0px
+
+.proposal-card h4
+    padding: 0 20px 0 20px
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: center
+    text-align: center
+    min-height: 35px
+
+.proposal-card ul
+    list-style: none
+    width: 100%
+    display: flex
+    padding: 20px
+    min-height: 425px
+    position: relative
+    justify-content: flex-start
+    align-items: center
+    flex-direction: column
+
+    @include tablet
+        min-height: 200px
+
+    @include phone
+        min-height: 0px
+
+.proposal-card ul:after
+    content: ''
+    border-bottom: 1px solid $blue-5
+    width: 60px
+    top: 0px
+    display: block
+    position: absolute
+
+.proposal-card li
+    width: 100%
+    margin-top: 10px
+    
+.proposal-card li:before
+  content: "\2022"
+  margin-right: 10px
+  color:  $gray-3
+
+.proposal-card > div
+    width: 100%
+    min-height: 50px
+    display: flex
+    padding: 10px
+    align-items: center
+
+.input-row 
+    display: flex
+    width: 100%
+    padding: 0px 25px 0px
+    justify-content: space-between
+    align-items: center
+    background-color: $white-2
+    
+.input-custom
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 15px
+    height: 15px
+    border: 1px solid $gray-1
+    border-radius: 50%
+
+.input-custom .checkmark
+    width: calc(100% - 6px)
+    height: calc(100% - 6px)
+    border-radius: 50%
+    background-color: $green-1
+    display: none
+
+.input-custom input
+    display: none 
+
+.input-custom input:checked + .checkmark
+    display: inline-block
+    background-color: $green-1
+    
+.selected-card, .selected-card .input-row 
+    border: 1px solid $blue-2
+
+.selected-card .input-custom
+    border-color: $green-1
+
+.input-row > p
+    color: $gray-1
+
+.selected-card .input-row > p
+    color: $blue-4

@@ -1,0 +1,65 @@
+@import 'src/vars/colors'
+@import 'src/vars/mixins'
+
+.container-menu-tabs
+  display: flex
+  padding: 0px 40px 0px
+  width: 100vw
+
+  @include tablet
+    padding: 0px
+
+.container-menu-tabs nav
+  display: flex
+  flex-wrap: wrap
+  justify-content: flex-end
+  align-items: flex-end
+  background: $white-1
+  padding: 20px 90px 10px 0px
+  gap: 40px
+  width: 100%
+  box-shadow: -1px 1px 5px -2px $black-1
+
+  @include tablet
+    padding: 20px 40px 5px
+
+  @include phone
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    padding: 0px
+    gap: 10px
+
+nav a
+  color: $blue-1
+
+  @include phone
+    width: 100vw
+    padding: 10px
+
+nav a:hover
+  cursor: pointer
+  color: $blue-2
+  position: relative
+
+  @include phone
+    background-color: $blue-2
+    color: $white-1
+    transition: background-color 0.8s
+
+  &:after
+    content: ''
+    border-bottom: 2px solid $blue-2
+    width: 90px
+    margin-top: 10px
+    display: block
+    position: absolute
+    left: -25px 
+
+    @include phone
+      border-bottom: 0px
+      left: 0px
+      margin-top: 0px
+
+
+    

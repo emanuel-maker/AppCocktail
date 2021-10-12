@@ -1,0 +1,47 @@
+@import 'src/vars/colors'
+@import 'src/vars/mixins'
+
+.container > h1
+    width: 100%
+    padding: 45px 60px 15px
+
+    @include tablet
+        padding: 10px
+
+    @include phone
+        padding: 10px
+
+.container > div
+    padding: 0px 20px
+
+    @include tablet
+        padding: 0px
+
+    @include phone
+        padding: 0px
+
+    
+.container-drinks
+    width: 100vw
+    background-color: $white-1
+    border: 1px solid $white-3
+    padding: 0px 40px
+    display: flex
+    flex-direction: column
+
+    @include tablet
+        padding: 10px
+
+    @include phone
+        padding: 0px 
+
+.container h1
+    color: $blue-1
+
+.container-drinks > div
+    display: flex
+    flex-direction: column
+    gap: 20px
+    
+
+    
