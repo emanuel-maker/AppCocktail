@@ -7,12 +7,6 @@ const Proposals = () => {
 
   const [proposalSelected, setProposal] = React.useState(0);
 
-  const setCardSelected = (id : number) => {
-    setProposal(id);
-
-    console.log("🚀 ~ file: CardList.tsx ~ line 18 ~ setCardSelected ~ id", id)
-  }
-
   return (
     <div>
         <h2 className="title-proposals"><span>HOTEL</span> Mieres del Camín Apartamentos</h2>
@@ -21,7 +15,7 @@ const Proposals = () => {
             <ProposalCard 
               key={proposal.id} 
               proposal={proposal} 
-              setProposal={setCardSelected} 
+              setProposal={setProposal} 
               proposalSelected={proposalSelected}
             />
           )}
